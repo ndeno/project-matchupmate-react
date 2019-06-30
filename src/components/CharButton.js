@@ -10,12 +10,13 @@ class CharButton extends Component {
 
   handleClick(e){
     e.preventDefault();
+    this.props.charSelect(e.target.value); 
     this.props.__next();
   } 
 
   render(){
     return (
-     <Button className={'char-button'} onClick={this.handleClick}>
+     <Button onClick={this.handleClick} value={this.props.name} id={this.props.name}>
       {this.props.name}
      </Button>
     );

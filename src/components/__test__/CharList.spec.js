@@ -8,7 +8,7 @@ it("renders without crashing", () => {
   const wrapper =shallow(<CharList chars={chars}/>);
 });
 
-describe('CharList', () => {
+describe('CharList type', () => {
   let wrapper; 
 
   beforeEach(()=>{
@@ -19,3 +19,9 @@ describe('CharList', () => {
     expect(wrapper.children(CharCard).length).toEqual(1);
   });
 });
+
+
+
+
+
+

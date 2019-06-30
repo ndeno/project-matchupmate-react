@@ -1,9 +1,19 @@
-import React from "react";
-// import chars from "../model/Chars";
-// import CharCard from "./CharCard";
+import React, { Component }  from 'react';
+import { Button } from "react-bootstrap";
 
-const MoveList = props => {
-    return('');
-};
+class MoveList extends Component {
+
+    constructor(props) {
+        super(props);
+    }
+
+  render() {
+    return (
+      <div>
+        <Button id="back-button" onClick={this.props.__prev}>Back</Button>
+      </div>
+    );
+  }
+}
 
 export default MoveList;
