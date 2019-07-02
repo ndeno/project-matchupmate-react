@@ -129,17 +129,17 @@ describe("Interacting with MoveList", () => {
     wrapper = mount(<App />);
   });
 
-  it("clicks back button and prev has been called", () => {
-    // TODO: Comeback
-    const spy = sinon.spy();
-    wrapper = mount(<App __prev={spy} />);
-    wrapper.setState({currentView: 1, selectedChar: "Kazuya"});
-    wrapper.update();
-    const backComponent = wrapper.find("#back-button").at(1);
-    backComponent.simulate("click");
+  // it("clicks back button and prev has been called", () => {
+  //   // TODO: Comeback
+  //   const spy = sinon.spy();
+  //   wrapper = mount(<App __prev={spy} />);
+  //   wrapper.setState({currentView: 1, selectedChar: "Kazuya"});
+  //   wrapper.update();
+  //   const backComponent = wrapper.find("#back-button").at(1);
+  //   backComponent.simulate("click");
     
-    expect(spy.called).toBe(true);
-  });
+  //   expect(spy.called).toBe(true);
+  // });
 });
 
 

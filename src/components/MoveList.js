@@ -1,5 +1,5 @@
 import React, { Component }  from 'react';
-import { Button } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 class MoveList extends Component {
 
@@ -9,9 +9,17 @@ class MoveList extends Component {
 
   render() {
     return (
-      <div>
-        <Button id="back-button" onClick={this.props.__prev}>Back</Button>
-      </div>
+      <Container>
+        <Row>
+          <Col>
+
+          </Col>
+          <Button id="back-button" onClick={this.props.__prev}>Back</Button>
+        </Row>
+
+
+        
+      </Container>
     );
   }
 }
