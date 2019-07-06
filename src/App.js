@@ -57,7 +57,7 @@ class App extends Component {
             )}
           </Row>
           <Row className="justify-content-md-center" sm={6}>
-            {this.state.currentView === 1 && <MoveList className="move-list" __prev={this.__prev}/>}
+            {this.state.currentView === 1 && <MoveList className="move-list" selectedChar={this.state.selectedChar} __prev={this.__prev}/>}
           </Row>
         </Container>
       </div>

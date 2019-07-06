@@ -2,43 +2,48 @@ const Kazuya = {
     charName : 'Kazuya',
     moves : [
         {
-            name : 'Proper name1',
+            index : 1,
             notation: 'ff2', 
             speed : 'i10',
             onHit: '+3',
-            onBlock: '-0'
+            onBlock: '-0',
+            hitLevel: 'hhh'
         },
         {
-            name : 'Proper name2',
+            index : 2,
             notation: 'ff2', 
             speed : 'i10',
             onHit: '+3',
-            onBlock: '-0'
+            onBlock: '-0',
+            hitLevel: 'hhh'
         },
         {
-            name : 'Proper name3',
+            index : 3,
             notation: 'ff2', 
             speed : 'i10',
             onHit: '+3',
-            onBlock: '-0'
+            onBlock: '-0',
+            hitLevel: 'hhh'
         },
         {
-            name : 'Proper name4',
+            index : 4,
             notation: 'ff2', 
             speed : 'i10',
             onHit: '+3',
-            onBlock: '-0'
+            onBlock: '-0',
+            hitLevel: 'hhh'
         },
         {
-            name : 'Proper name5',
+            index : 5,
             notation: 'ff2', 
             speed : 'i10',
             onHit: '+3',
-            onBlock: '-0'
+            onBlock: '-0',
+            hitLevel: 'hhh'
         }
     ]
 }
 
 const chars = [Kazuya];
 
-export  default chars;
+export default chars;

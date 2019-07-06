@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import Header from "../Header";
-import { Navbar, Nav } from "react-bootstrap";
+import { Navbar } from "react-bootstrap";
 
 describe("Header", () => {
   let wrapper;

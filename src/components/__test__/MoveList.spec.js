@@ -1,7 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import MoveList from "../MoveList";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container, Row, Col, Button } from "react-bootstrap";
 
 describe("smoke test", () => {
   it("renders without crashing", () => {
@@ -45,21 +45,34 @@ describe("MoveList element", () => {
       });
     });
 
-    describe("Button element", () => {
-      let buttonElement;
+    describe("Col element", () => {
+      let secondColElement;
 
       beforeEach(() => {
-        buttonElement = rowElement.props.children[1];
+        secondColElement = rowElement.props.children[1];
       });
 
-      it("has a button element", () => {
-        expect(buttonElement.type).toBe(Button);
+      it("is a col component", () => {
+        // console.log(wrapper.debug());
+        expect(secondColElement.type).toBe(Col);
       });
-      it("has a button element", () => {
-        expect(buttonElement.type).toBe(Button);
-      });
-      it("has a button element", () => {
-        expect(buttonElement.props.children).toBe("Back");
+      describe("Button element", () => {
+        let buttonElement;
+
+        beforeEach(() => {
+          buttonElement = secondColElement.props.children;
+        });
+
+        it("has a button element", () => {
+          expect(buttonElement.type).toBe(Button);
+        });
+
+        it("has a button element", () => {
+          expect(buttonElement.type).toBe(Button);
+        });
+        it("has a button element", () => {
+          expect(buttonElement.props.children).toBe("Back");
+        });
       });
     });
   });
