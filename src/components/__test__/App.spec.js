@@ -24,12 +24,12 @@ describe("child components", () => {
     wrapper = shallow(<App />);
   });
 
-  it("has CharList as child", () => {
+  it("has a CharList", () => {
     wrapper.setState({ currentView: 0 });
     expect(wrapper.find(CharList)).toHaveLength(1);
   });
 
-  it("has MoveList as child", () => {
+  it("has a MoveList", () => {
     wrapper.setState({ currentView: 1 });
     expect(wrapper.find(MoveList)).toHaveLength(1);
   });

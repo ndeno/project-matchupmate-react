@@ -1,6 +1,7 @@
 import React from "react";
 import { shallow } from "enzyme";
 import MoveList from "../MoveList";
+import MoveCard from "../MoveCard";
 import { Container, Row, Col, Button } from "react-bootstrap";
 
 describe("smoke test", () => {
@@ -21,10 +22,36 @@ describe("MoveList element", () => {
   });
 
   describe("Row element", () => {
+    let rowHeader;
+
+    beforeEach(() => {
+      rowHeader = wrapper.props().children[0];
+    });
+
+    it("contains notation text detail ", () => {
+      let notationHeaderElement = rowHeader.props.children[0];
+      expect(notationHeaderElement.props.children).toBe("Input");
+    });
+
+    it("remaining row text detail is correct", () => {
+      let speedHeaderElement = rowHeader.props.children[1];
+      let onHitHeaderElement = rowHeader.props.children[2];
+      let onBlockHeaderElement = rowHeader.props.children[3];
+      let hitLevelHeaderElement = rowHeader.props.children[4];
+      expect(speedHeaderElement.props.children).toBe("Speed");
+      expect(onHitHeaderElement.props.children).toBe("On Hit");
+      expect(onBlockHeaderElement.props.children).toBe("On Block");
+      expect(hitLevelHeaderElement.props.children).toBe("Hit Level");
+    });
+  });
+
+  describe("Row element", () => {
     let rowElement;
 
     beforeEach(() => {
-      rowElement = wrapper.props().children;
+      rowElement = wrapper.props().children[1];
+      // console.log(wrapper.debug())
+      // rowElement = wrapper.find('div.movelist-row');
     });
 
     it("is a row component", () => {
@@ -84,9 +111,4 @@ describe("Recieves props", () => {
   beforeEach(() => {
     wrapper = shallow(<MoveList selectedChar={"Kazuya"} />);
   });
-
-  //no need to test for this
-  // it('recieves selectedChar',()=>{
-  //   expect(wrapper.instance().props.selectedChar).toBe("Kazuya");
-  // })
 });
