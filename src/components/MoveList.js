@@ -23,6 +23,8 @@ class MoveList extends Component {
     this.setState({ movesForSelectedChar: movelist });
   }
 
+  
+
   render() {
     let listOfCharacterMoves = this.state.movesForSelectedChar.map(
       (listItems, i) => <MoveCard key={i} move={listItems} />
