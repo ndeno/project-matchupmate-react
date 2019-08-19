@@ -11,6 +11,31 @@ class MoveList extends Component {
     this.state = {
       movesForSelectedChar: []
     };
+
+    this.handleClick = this.handleClick.bind(this);
+    this.selectedMove = this.selectedMove.bind(this);
+  }
+
+  handleClick(e, notation) {
+    e.preventDefault();
+    let passedNotation = notation;
+    this.selectedMove(passedNotation);
+  }
+
+  selectedMove(notation) {
+    let sortedMovelist = this.state.movesForSelectedChar.map(function(move) {
+      let returnedMove = move;
+      if (move.notation === notation) {
+        returnedMove.selected = true;
+        return returnedMove;
+      } else {
+        let returnedMove = move;
+        returnedMove.selected = false;
+        return returnedMove;
+      }
+    });
+    sortedMovelist.sort((a, b) => (a.selected > b.selected ? -1 : 0));
+    this.setState({ movesForSelectedChar: sortedMovelist });
   }
 
   componentDidMount() {
@@ -23,11 +48,11 @@ class MoveList extends Component {
     this.setState({ movesForSelectedChar: movelist });
   }
 
-  
-
   render() {
     let listOfCharacterMoves = this.state.movesForSelectedChar.map(
-      (listItems, i) => <MoveCard key={i} move={listItems} />
+      (listItems, i) => (
+        <MoveCard key={i} move={listItems} handleClick={this.handleClick} />
+      )
     );
 
     return (
@@ -38,9 +63,10 @@ class MoveList extends Component {
           <Col sm={2}>On Hit</Col>
           <Col sm={2}>On Block</Col>
           <Col sm={2}>Hit Level</Col>
+          <Col sm={2}>Select</Col>
           <Col sm={2} />
         </Row>
-        <Row className="movelist-row">
+        <Row className="movelist-row" id="movelist-row">
           <Col sm={12}>{listOfCharacterMoves}</Col>
           <Col sm={12}>
             <Button id="back-button" onClick={this.props.__prev}>

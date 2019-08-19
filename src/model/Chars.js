@@ -3,7 +3,7 @@ const Kazuya = {
     moves : [
         {
             index : 1,
-            notation: 'ff2', 
+            notation: '1', 
             speed : 'i10',
             onHit: '+3',
             onBlock: '-0',
@@ -11,7 +11,7 @@ const Kazuya = {
         },
         {
             index : 2,
-            notation: 'ff2', 
+            notation: '11', 
             speed : 'i10',
             onHit: '+3',
             onBlock: '-0',
@@ -19,7 +19,7 @@ const Kazuya = {
         },
         {
             index : 3,
-            notation: 'ff2', 
+            notation: '13', 
             speed : 'i10',
             onHit: '+3',
             onBlock: '-0',
@@ -27,7 +27,7 @@ const Kazuya = {
         },
         {
             index : 4,
-            notation: 'ff2', 
+            notation: '122', 
             speed : 'i10',
             onHit: '+3',
             onBlock: '-0',

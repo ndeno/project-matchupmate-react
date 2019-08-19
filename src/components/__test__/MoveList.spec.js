@@ -1,8 +1,9 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { shallow, mount } from "enzyme";
 import MoveList from "../MoveList";
 import MoveCard from "../MoveCard";
 import { Container, Row, Col, Button } from "react-bootstrap";
+
 
 describe("smoke test", () => {
   it("renders without crashing", () => {
@@ -55,7 +56,6 @@ describe("MoveList element", () => {
     });
 
     it("is a row component", () => {
-      // console.log(wrapper.debug());
       expect(rowElement.type).toBe(Row);
     });
 
@@ -67,7 +67,6 @@ describe("MoveList element", () => {
       });
 
       it("is a col component", () => {
-        // console.log(wrapper.debug());
         expect(colElement.type).toBe(Col);
       });
     });
@@ -80,7 +79,6 @@ describe("MoveList element", () => {
       });
 
       it("is a col component", () => {
-        // console.log(wrapper.debug());
         expect(secondColElement.type).toBe(Col);
       });
       describe("Button element", () => {
@@ -105,10 +103,33 @@ describe("MoveList element", () => {
   });
 });
 
-describe("Recieves props", () => {
+describe("Updates Sorted Order When Selected", () => {
   let wrapper;
 
   beforeEach(() => {
-    wrapper = shallow(<MoveList selectedChar={"Kazuya"} />);
+    wrapper = mount(<MoveList selectedChar={"Kazuya"} />);
+  });
+
+  describe("Row element", () => {
+    let rowElement;
+    let rowElementUpdated;
+    let selectButton; 
+
+    beforeEach(() => {
+      rowElement = wrapper.find('#move-detail-notation').at(1);
+      selectButton = wrapper.find('#move-select-button').at(2);
+    });
+
+    it("control test", () => {
+      expect(rowElement.text()).toBe('1');
+    });
+
+    it("sorts the moves by selected clicks", () => {
+      selectButton.simulate('click'); 
+      wrapper.update();
+      rowElementUpdated = wrapper.find('#move-detail-notation').at(1);
+      expect(rowElementUpdated.text()).toBe('11');
+    });
+    
   });
 });

@@ -53,8 +53,8 @@ describe("MoveCard", () => {
       expect(rowElement).toHaveLength(1);
     });
 
-    it("should have 6 columns ", () => {
-      expect(rowElement.children()).toHaveLength(6);
+    it("should have 7 columns ", () => {
+      expect(rowElement.children()).toHaveLength(7);
     });
   });
 });
