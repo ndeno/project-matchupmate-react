@@ -13,17 +13,17 @@ class MoveList extends Component {
     };
 
     this.handleClick = this.handleClick.bind(this);
-    this.selectedMove = this.selectedMove.bind(this);
+    this.selectedMoveSort = this.selectedMoveSort.bind(this);
   }
 
   handleClick(e, notation) {
     e.preventDefault();
     let passedNotation = notation;
-    this.selectedMove(passedNotation);
+    this.selectedMoveSort(passedNotation);
   }
 
-  selectedMove(notation) {
-    let sortedMovelist = this.state.movesForSelectedChar.map(function(move) {
+  selectedMoveSort(notation) {
+    let sortedMovelist = this.state.movesForSelectedChar.map(move => {
       let returnedMove = move;
       if (move.notation === notation) {
         returnedMove.selected = true;
@@ -45,6 +45,7 @@ class MoveList extends Component {
         movelist = chars[c].moves;
       }
     }
+    movelist.sort((a, b) => (a.topMove > b.topMove ? -1 : 0));
     this.setState({ movesForSelectedChar: movelist });
   }
 
@@ -66,13 +67,13 @@ class MoveList extends Component {
           <Col sm={2}>Select</Col>
           <Col sm={2} />
         </Row>
-        <Row className="movelist-row" id="movelist-row">
+        <Row className="movelist-row scrollable" id="movelist-row">
           <Col sm={12}>{listOfCharacterMoves}</Col>
-          <Col sm={12}>
-            <Button id="back-button" onClick={this.props.__prev}>
-              Back
-            </Button>
-          </Col>
+        </Row>
+        <Row className="movelist-footer justify-content-md-center">
+          <Button id="back-button movelist-footer-button" onClick={this.props.__prev}>
+            Back
+          </Button>
         </Row>
       </Container>
     );

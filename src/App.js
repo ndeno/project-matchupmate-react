@@ -44,8 +44,8 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Container className="text-center is-center">
-          <Row className="justify-content-md-center" sm={6}>
+        <Container sm={12} className="text-center is-center">
+          <Row className="justify-content-md-center charlist-container" sm={12}>
             {this.state.currentView === 0 && (
               <CharList
                 className="char-list"
@@ -56,8 +56,14 @@ class App extends Component {
               />
             )}
           </Row>
-          <Row className="justify-content-md-center" sm={6}>
-            {this.state.currentView === 1 && <MoveList className="move-list" selectedChar={this.state.selectedChar} __prev={this.__prev}/>}
+          <Row className="justify-content-md-center" sm={12}>
+            {this.state.currentView === 1 && (
+              <MoveList
+                className="move-list"
+                selectedChar={this.state.selectedChar}
+                __prev={this.__prev}
+              />
+            )}
           </Row>
         </Container>
       </div>

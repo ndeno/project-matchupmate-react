@@ -16,7 +16,7 @@ class CharButton extends Component {
 
   render(){
     return (
-     <Button onClick={this.handleClick} value={this.props.name} id={this.props.name}>
+     <Button className="charbutton-button" onClick={this.handleClick} value={this.props.name} id={this.props.name}>
       {this.props.name}
      </Button>
     );

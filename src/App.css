@@ -23,13 +23,106 @@
   color: #61dafb;
 }
 
-.is-red{
+.is-red {
   background: red;
 }
 
-.is-center{
+.is-center {
   text-align: center;
 }
+
+.charlist-container {
+  margin: 20px;
+}
+
+.charlist-col {
+  margin: 2px 2px;
+}
+
+
+/* .scrollable {
+  margin: 2px, 2px;
+  padding: 4px;
+  width: 100%;
+  height: 500px;
+  overflow-x: hidden;
+  overflow-x: auto;
+} */
+
+
+.charbutton-button {
+  text-align: center;
+  width: 50%;
+}
+
+.movelist-row {
+  margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  height: 22px;
+ 
+   
+}
+
+.movelist-footer {
+  text-align: center;
+}
+
+.top-move-row{
+  background-color: rgb(226, 228, 226);
+}
+
+.move-select-button {
+	background-color:transparent;
+
+	border: none;
+	display:inline-block;
+
+	color:#666666;
+	font-family: Arial, Helvetica, sans-serif;
+  font-size:15px;
+  font-size: 15px;
+  line-height: 1.4;
+  
+	
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.move-select-button:hover {
+	background-color:transparent;
+}
+.move-select-button:active {
+	position:relative;
+	top:1px;
+}
+
+.movelist-header{
+  border-bottom: 1px solid #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+/* .table100.ver1 .table100-nextcols td {
+  color: #999;
+} */
+
+/* .table100.ver1 td {
+  font-family: Roboto-Medium;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.table100 td {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.column2 {
+  width: 225px;
+  padding-left: 55px;
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -39,4 +132,3 @@
     transform: rotate(360deg);
   }
 }
-
