@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/project-matchupmate-react/static/css/main.cd62fdb5.chunk.css",
+    "main.js": "/project-matchupmate-react/static/js/main.f570e7e3.chunk.js",
+    "main.js.map": "/project-matchupmate-react/static/js/main.f570e7e3.chunk.js.map",
+    "runtime~main.js": "/project-matchupmate-react/static/js/runtime~main.1b98a95c.js",
+    "runtime~main.js.map": "/project-matchupmate-react/static/js/runtime~main.1b98a95c.js.map",
+    "static/js/2.30c12010.chunk.js": "/project-matchupmate-react/static/js/2.30c12010.chunk.js",
+    "static/js/2.30c12010.chunk.js.map": "/project-matchupmate-react/static/js/2.30c12010.chunk.js.map",
+    "index.html": "/project-matchupmate-react/index.html",
+    "precache-manifest.05da034f5563fc8a39d4e3e11d2796d9.js": "/project-matchupmate-react/precache-manifest.05da034f5563fc8a39d4e3e11d2796d9.js",
+    "service-worker.js": "/project-matchupmate-react/service-worker.js",
+    "static/css/main.cd62fdb5.chunk.css.map": "/project-matchupmate-react/static/css/main.cd62fdb5.chunk.css.map"
+  }
+}
