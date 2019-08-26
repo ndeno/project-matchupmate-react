@@ -4,6 +4,7 @@ import "./App.css";
 import { Container, Row } from "react-bootstrap";
 
 import Header from "./components/Header";
+import Footer from "./components/Footer"
 import CharList from "./components/CharList";
 import MoveList from "./components/MoveList";
 
@@ -43,7 +44,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header currentView={this.state.currentView} />
         <Container sm={12} className="text-center is-center">
           <Row className="justify-content-md-center charlist-container" sm={12}>
             {this.state.currentView === 0 && (
@@ -66,6 +67,7 @@ class App extends Component {
             )}
           </Row>
         </Container>
+        <Footer currentView={this.state.currentView} __prev={this.__prev}></Footer>
       </div>
     );
   }

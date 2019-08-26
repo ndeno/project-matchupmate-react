@@ -3,7 +3,7 @@ import { Row, Col } from "react-bootstrap";
 
 const MoveCard = props => {
 
-  let topMoveRender = "move-detail-row";
+  let topMoveRender = "justify-content-md-center move-detail-row";
 
   if(props.move.topMove === "true"){
     console.log("was a top move!!")
@@ -33,7 +33,7 @@ const MoveCard = props => {
             className="move-select-button"
             id="move-select-button"
             onClick={e => props.handleClick(e, props.move.notation)}>
-            Select
+            -
           </button>
         </Col>
         <Col sm={2} />

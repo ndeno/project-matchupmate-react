@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import MoveCard from "./MoveCard";
 import chars from "../model/Chars";
@@ -68,12 +68,9 @@ class MoveList extends Component {
           <Col sm={2} />
         </Row>
         <Row className="movelist-row scrollable" id="movelist-row">
-          <Col sm={12}>{listOfCharacterMoves}</Col>
-        </Row>
-        <Row className="movelist-footer justify-content-md-center">
-          <Button id="back-button movelist-footer-button" onClick={this.props.__prev}>
-            Back
-          </Button>
+          <Col sm={12} className="no-spacing">
+            {listOfCharacterMoves}
+          </Col>
         </Row>
       </Container>
     );
