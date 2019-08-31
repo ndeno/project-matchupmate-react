@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Ndenn00/project-matchupmate-react/static/css/main.cd62fdb5.chunk.css",
-    "main.js": "/Ndenn00/project-matchupmate-react/static/js/main.13723245.chunk.js",
-    "main.js.map": "/Ndenn00/project-matchupmate-react/static/js/main.13723245.chunk.js.map",
-    "runtime~main.js": "/Ndenn00/project-matchupmate-react/static/js/runtime~main.12b4d28f.js",
-    "runtime~main.js.map": "/Ndenn00/project-matchupmate-react/static/js/runtime~main.12b4d28f.js.map",
-    "static/js/2.30c12010.chunk.js": "/Ndenn00/project-matchupmate-react/static/js/2.30c12010.chunk.js",
-    "static/js/2.30c12010.chunk.js.map": "/Ndenn00/project-matchupmate-react/static/js/2.30c12010.chunk.js.map",
-    "index.html": "/Ndenn00/project-matchupmate-react/index.html",
-    "precache-manifest.70017c67d6ac96ace30ccc003018bf1c.js": "/Ndenn00/project-matchupmate-react/precache-manifest.70017c67d6ac96ace30ccc003018bf1c.js",
-    "service-worker.js": "/Ndenn00/project-matchupmate-react/service-worker.js",
-    "static/css/main.cd62fdb5.chunk.css.map": "/Ndenn00/project-matchupmate-react/static/css/main.cd62fdb5.chunk.css.map"
+    "main.css": "/project-matchupmate-react/static/css/main.09523aa4.chunk.css",
+    "main.js": "/project-matchupmate-react/static/js/main.f570e7e3.chunk.js",
+    "main.js.map": "/project-matchupmate-react/static/js/main.f570e7e3.chunk.js.map",
+    "runtime~main.js": "/project-matchupmate-react/static/js/runtime~main.1b98a95c.js",
+    "runtime~main.js.map": "/project-matchupmate-react/static/js/runtime~main.1b98a95c.js.map",
+    "static/js/2.30c12010.chunk.js": "/project-matchupmate-react/static/js/2.30c12010.chunk.js",
+    "static/js/2.30c12010.chunk.js.map": "/project-matchupmate-react/static/js/2.30c12010.chunk.js.map",
+    "index.html": "/project-matchupmate-react/index.html",
+    "precache-manifest.c414b9be21e31063916570ea4be27d85.js": "/project-matchupmate-react/precache-manifest.c414b9be21e31063916570ea4be27d85.js",
+    "service-worker.js": "/project-matchupmate-react/service-worker.js",
+    "static/css/main.09523aa4.chunk.css.map": "/project-matchupmate-react/static/css/main.09523aa4.chunk.css.map"
   }
 }
